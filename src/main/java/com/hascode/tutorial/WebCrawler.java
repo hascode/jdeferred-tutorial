@@ -7,7 +7,7 @@ import org.jdeferred.Deferred;
 import org.jdeferred.Promise;
 import org.jdeferred.impl.DeferredObject;
 
-public class WebCrawler {
+public class WebCrawler { // ugly, stateful, demonstration only ;)
 	private final Deferred<List<String>, String, Integer> deferred = new DeferredObject<>();
 	private List<String> keywordsFound = new ArrayList<>();
 

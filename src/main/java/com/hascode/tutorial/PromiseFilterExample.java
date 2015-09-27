@@ -14,11 +14,13 @@ public class PromiseFilterExample {
 					System.out.println("Done, " + keywords.size() + " keywords found: ");
 					keywords.forEach(System.out::println);
 				});
+
 		Promise<List<String>, String, Integer> filteredPromise = promise.then((keywords) -> Collections.sort(keywords));
 		filteredPromise.done((keywords) -> {
 			System.out.println("Done (sorted by filter), " + keywords.size() + " keywords found: ");
 			keywords.forEach(System.out::println);
 		});
+
 		crawler.crawl("http://www.hascode.com/");
 	}
 }
